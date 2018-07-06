@@ -1,0 +1,23 @@
+
+import java.util.Scanner;
+ public class Ejercicio5{
+    static Scanner entrada = new Scanner(System.in);
+    public static void main (String[] args) {
+        int mat[][] = {{6,7,2,3},{8,3,7,7},{5,6,3,8},{1,2,3,8}};
+        
+
+       
+        
+        System.out.print(sumando(mat));
+    }
+
+    public static int sumando(int mat[][]){
+        int sumadiagonales = 1;
+        for(int x =0; x<mat.length; x++) {
+            sumadiagonales = sumadiagonales + mat[x][2-x];
+            
+        }
+
+        return sumadiagonales;
+    }
+ }    
