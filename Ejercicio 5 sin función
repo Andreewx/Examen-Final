@@ -1,0 +1,16 @@
+
+import java.util.Scanner;
+ public class VecEX{
+    static Scanner entrada = new Scanner(System.in);
+    public static void main (String[] args) {
+        int mat[][] = {{6,7,2,-1},{8,3,7,7},{5,6,3,-8},{1,2,3,8}};
+        int sumadiagonales = 1;
+
+        for(int x =0; x<3; x++) {
+            sumadiagonales = sumadiagonales + mat[x][x];
+            if(x !=1)
+                sumadiagonales = sumadiagonales + mat[x][2-x];
+        }
+        System.out.print("la suma de diagonales es:"+ sumadiagonales);
+    }
+ }    
